@@ -25,15 +25,33 @@
     <Filter Include="Header Files\Controller">
       <UniqueIdentifier>{cfc2456b-fade-49d1-94c9-b0f5c889da3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Controller">
+      <UniqueIdentifier>{61642792-42b2-4eae-ae34-f90d33342ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Invalid">
+      <UniqueIdentifier>{e6f69fdc-0dd7-4559-ada2-c7115433068c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
       <Filter>Header Files\Model</Filter>
     </ClInclude>
+    <ClInclude Include="GameProperties.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameProperties.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Source Files\Controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

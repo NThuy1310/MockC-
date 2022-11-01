@@ -46,6 +46,7 @@ char GameController::checkWin(int Row, int Col, char Checked, shared_ptr<GamePro
 {
 	if (!checkIsFullBoard(GamePlaying))
 	{
+        // Check Win
         vector<vector<char>> BoardCheck = GamePlaying->getPointOfBoard();
         int SizeBoard = GamePlaying->getSizeBoard();
 		
@@ -206,4 +207,9 @@ char GameController::checkWin(int Row, int Col, char Checked, shared_ptr<GamePro
             }
         }
 	}
+    else if (checkIsFullBoard(GamePlaying))
+    {
+    //Case: Draw
+    return 'D';
+    }
 }

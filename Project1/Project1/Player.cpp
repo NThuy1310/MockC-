@@ -2,17 +2,14 @@
 
 Player::Player()
 {
-	Name = ' ';
+	//
+}
+Player::Player(string Name)
+{
+	this->Name = Name;
 	Win = 0;
 	Lose = 0;
 	Draw = 0;
-}
-Player::Player(string Name, int Win, int Lose, int Draw)
-{
-	this->Name = Name;
-	this->Win = Win;
-	this->Lose = Lose;
-	this->Draw = Draw;
 }
 Player::~Player()
 {

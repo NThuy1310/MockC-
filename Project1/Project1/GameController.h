@@ -20,6 +20,4 @@ public:
 
 	bool checkIsFullBoard(shared_ptr<GameProperties>);
 	char checkWin(int ,int , char, shared_ptr<GameProperties>);
-	void updatePlayerInfo();
-	void changeTurn();
 };

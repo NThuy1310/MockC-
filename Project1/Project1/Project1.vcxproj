@@ -19,14 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConsoleSetting.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="GameProperties.h" />
+    <ClInclude Include="IO.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleSetting.cpp" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameProperties.cpp" />
+    <ClCompile Include="IO.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

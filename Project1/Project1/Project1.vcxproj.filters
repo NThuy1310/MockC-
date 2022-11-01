@@ -28,8 +28,14 @@
     <Filter Include="Source Files\Controller">
       <UniqueIdentifier>{61642792-42b2-4eae-ae34-f90d33342ccd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Invalid">
-      <UniqueIdentifier>{e6f69fdc-0dd7-4559-ada2-c7115433068c}</UniqueIdentifier>
+    <Filter Include="Source Files\View">
+      <UniqueIdentifier>{b315b144-2d1b-488b-b60b-c0e66d4ba759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UserInterface">
+      <UniqueIdentifier>{b2fe88c3-fdcf-436d-979b-9bf8e5e693b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UserInterface">
+      <UniqueIdentifier>{9a1ccf80-7738-4a6f-983e-939dae7f28dc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +48,15 @@
     <ClInclude Include="GameController.h">
       <Filter>Header Files\Controller</Filter>
     </ClInclude>
+    <ClInclude Include="ConsoleSetting.h">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="IO.h">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files\UserInterface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -52,6 +67,18 @@
     </ClCompile>
     <ClCompile Include="GameController.cpp">
       <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleSetting.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="IO.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

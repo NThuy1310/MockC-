@@ -12,7 +12,7 @@ private:
 	int Draw;
 public:
 	Player();
-	Player(string, int, int, int);
+	Player(string);
 	~Player();
 
 	void setName(string);

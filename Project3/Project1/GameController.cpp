@@ -231,11 +231,11 @@ shared_ptr<Player> GameController::getSuitablePlayer(shared_ptr<Player> FoundedP
     {
         if (tListWinRate[i] == FoundedPlayer->getWinRate())
         {
-            if (i == 0)
+            if (i == tListWinRate.size() - 1)
             {
                 for (auto j = ListPlayer.begin(); j != ListPlayer.end(); j++)
                 {
-                    if (j->second->getWinRate() == tListWinRate[i + 1])
+                    if (j->second->getWinRate() == tListWinRate[i - 1])
                     {
                         return j->second;
                     }
@@ -245,9 +245,12 @@ shared_ptr<Player> GameController::getSuitablePlayer(shared_ptr<Player> FoundedP
             {
                 for (auto j = ListPlayer.begin(); j != ListPlayer.end(); j++)
                 {
-                    if (j->second->getWinRate() == tListWinRate[i - 1])
+                    if (j->second->getWinRate() == tListWinRate[i + 1])
                     {
-                        return j->second;
+                        if (j->first != FoundedPlayer->getName())
+                        {
+                            return j->second;
+                        }
                     }
                 }
             }

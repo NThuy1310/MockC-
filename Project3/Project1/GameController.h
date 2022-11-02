@@ -4,6 +4,7 @@
 #include<map>
 #include<memory>
 #include<cmath>
+#include<algorithm>
 
 class GameController
 {

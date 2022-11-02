@@ -1,12 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Project1.vcxproj, Project2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  ConsoleSetting.cpp
   GameController.cpp
-  GameProperties.cpp
-  GameRecord.cpp
-  IO.cpp
-  main.cpp
-  Player.cpp
-  UI.cpp
-  Generating Code...
 C:\Users\nguye\OneDrive\Desktop\C++ FPT\Code_Examples\BT\MockC++\Project3\Project1\GameController.cpp(215): warning C4715: 'GameController::checkWin': not all control paths return a value
+C:\Users\nguye\OneDrive\Desktop\C++ FPT\Code_Examples\BT\MockC++\Project3\Project1\GameController.cpp(256): warning C4715: 'GameController::getSuitablePlayer': not all control paths return a value
   Project1.vcxproj -> C:\Users\nguye\OneDrive\Desktop\C++ FPT\Code_Examples\BT\MockC++\Project3\x64\Debug\Project3.exe

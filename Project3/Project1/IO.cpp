@@ -454,7 +454,6 @@ void IO::replay()
 		SettingWindow::textColor(0, 7);
 		SettingWindow::gotoXY(0, 2 * Size + 5);
 	}
-	
 }
 
 int IO::inputValidNumber()

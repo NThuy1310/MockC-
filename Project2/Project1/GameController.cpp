@@ -221,26 +221,36 @@ shared_ptr<Player> GameController::findPlayer(string PlayerName)
 
 shared_ptr<Player> GameController::getSuitablePlayer(shared_ptr<Player> FoundedPlayer)
 {
-    shared_ptr<Player> tSuitablePlayer = ListPlayer.begin()->second;
-    map<string, shared_ptr<Player>> tListPlayer = ListPlayer;
-    tListPlayer.erase(ListPlayer.begin()->second->getName());
-    tListPlayer.erase(FoundedPlayer->getName());
-    // Founded Player
-    double fWinRate = (double)(FoundedPlayer->getWin() / (FoundedPlayer->getWin() + FoundedPlayer->getLose() + FoundedPlayer->getDraw()));
-    // First player
-    double sWinRate = (double)(tSuitablePlayer->getWin() / (tSuitablePlayer->getWin() + tSuitablePlayer->getLose() + tSuitablePlayer->getDraw()));
-    //
-    double nearestDistWin = abs(sWinRate - fWinRate);
-    // Find player by win rate
-    for (auto i = tListPlayer.begin(); i != tListPlayer.end(); i++)
+    vector<float> tListWinRate;
+    for (auto i = ListPlayer.begin(); i != ListPlayer.end(); i++)
     {
-        double tWinRate = (double)(i->second->getWin() / (i->second->getWin() + i->second->getLose() + i->second->getDraw()));
-        double tDistWin = abs(tWinRate - fWinRate);
-        if (nearestDistWin > tDistWin)
+        tListWinRate.push_back(i->second->getWinRate());
+    }
+    sort(tListWinRate.begin(), tListWinRate.end());
+    for (int i = 0; i < tListWinRate.size(); i++)
+    {
+        if (tListWinRate[i] == FoundedPlayer->getWinRate())
         {
-            nearestDistWin = tDistWin;
-            tSuitablePlayer = i->second;
+            if (i == 0)
+            {
+                for (auto j = ListPlayer.begin(); j != ListPlayer.end(); j++)
+                {
+                    if (j->second->getWinRate() == tListWinRate[i + 1])
+                    {
+                        return j->second;
+                    }
+                }
+            }
+            else
+            {
+                for (auto j = ListPlayer.begin(); j != ListPlayer.end(); j++)
+                {
+                    if (j->second->getWinRate() == tListWinRate[i - 1])
+                    {
+                        return j->second;
+                    }
+                }
+            }
         }
     }
-    return tSuitablePlayer;
 }

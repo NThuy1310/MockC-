@@ -49,3 +49,8 @@ int Player::getDraw()
 {
 	return Draw;
 }
+float Player::getWinRate()
+{
+	float WinRate = (float)(Win) / (Win + Lose + Draw);
+	return WinRate;
+}

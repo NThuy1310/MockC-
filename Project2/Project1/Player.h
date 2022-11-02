@@ -24,5 +24,5 @@ public:
 	int getWin();
 	int getLose();
 	int getDraw();
-
+	float getWinRate();
 };
